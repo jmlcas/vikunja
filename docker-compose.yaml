@@ -1,5 +1,3 @@
-version: '3.3'
-
 services:
 
   db:
@@ -43,5 +41,5 @@ services:
     depends_on:
       - api
       - frontend
-    restart: unless-stopped
-    
+    restart: unless-stopped   
+
