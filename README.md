@@ -1,6 +1,3 @@
-# vikunja
-Vikunja - Gestión de proyectos - Docker compose
+# Vikunja
 
-Ver en "localhost:8200"
-
-
+Ver en "http://localhost:8200"
