@@ -3,13 +3,13 @@ services:
   vikunja:
     image: vikunja/vikunja
     environment:
-      VIKUNJA_SERVICE_PUBLICURL: http://localhost:8200  # the public ip or host where Vikunja is reachable
+      VIKUNJA_SERVICE_PUBLICURL: http://localhost:8200
       VIKUNJA_DATABASE_HOST: db
-      VIKUNJA_DATABASE_PASSWORD: changeme
+      VIKUNJA_DATABASE_PASSWORD: p4ssw0rd     # cambiarlo
       VIKUNJA_DATABASE_TYPE: postgres
       VIKUNJA_DATABASE_USER: vikunja
       VIKUNJA_DATABASE_DATABASE: vikunja
-      VIKUNJA_SERVICE_JWTSECRET: <a super secure random secret>
+      VIKUNJA_SERVICE_JWTSECRET: mbcD01tDXt6HSSyQ7kmXkil67cyDa9O2GydD0pukNsA=       # generar clave con el comando "openssl rand -base64 32"
       VIKUNJA_SERVICE_ENABLEREGISTRATION: 0
     ports:
       - "8200:3456"
@@ -32,6 +32,4 @@ services:
       test: ["CMD-SHELL", "pg_isready -h localhost -U $$POSTGRES_USER"]
       interval: 2s
       start_period: 30s
-
-
 
