@@ -5,7 +5,7 @@ services:
     environment:
       VIKUNJA_SERVICE_PUBLICURL: http://localhost:8200   # cambiar por IP:8200 ó dominio
       VIKUNJA_DATABASE_HOST: db
-      VIKUNJA_DATABASE_PASSWORD: p4ssword
+      VIKUNJA_DATABASE_PASSWORD: p4ssw0rd
       VIKUNJA_DATABASE_TYPE: postgres
       VIKUNJA_DATABASE_USER: vikunja
       VIKUNJA_DATABASE_DATABASE: vikunja
@@ -32,5 +32,6 @@ services:
       test: ["CMD-SHELL", "pg_isready -h localhost -U $$POSTGRES_USER"]
       interval: 2s
       start_period: 30s
+
 
 
