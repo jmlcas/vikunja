@@ -1,7 +1,7 @@
 services:
 
   vikunja:
-    image: vikunja/vikunja
+    image: vikunja/vikunja:latest
     environment:
       VIKUNJA_SERVICE_PUBLICURL: http://localhost:8200   # cambiar por IP:8200 ó dominio
       VIKUNJA_DATABASE_HOST: db
@@ -16,10 +16,9 @@ services:
     volumes:
       - ./files:/app/vikunja/files
     depends_on:
-      db:
-        condition: service_healthy
+      - db
     restart: unless-stopped
-    
+
   db:
     image: postgres:18
     environment:
@@ -28,10 +27,3 @@ services:
     volumes:
       - ./db:/var/lib/postgresql
     restart: unless-stopped
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -h localhost -U $$POSTGRES_USER"]
-      interval: 2s
-      start_period: 30s
-
-
-
