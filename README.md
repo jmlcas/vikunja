@@ -10,4 +10,4 @@ Una vez ya registrado cambiar: VIKUNJA_SERVICE_ENABLEREGISTRATION: 0  (en vez de
 
 -----------------
 
-[![Alt text](https://img.youtube.com/vi/GZJTtFznxlQ/0.jpg)](https://www.youtube.com/watch?v=GZJTtFznxlQ
+[![Alt text](https://img.youtube.com/vi/GZJTtFznxlQ/0.jpg)](https://www.youtube.com/watch?v=GZJTtFznxlQ)
